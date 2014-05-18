@@ -12,9 +12,9 @@ int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSHost *host = [NSHost currentHost];
+        NSString *name = [host localizedName];
+        NSLog(@"My computer's name is %@",name);
         
     }
     return 0;
