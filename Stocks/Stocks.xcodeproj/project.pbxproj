@@ -11,6 +11,7 @@
 		AFCC0302192C52790048CCEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0301192C52790048CCEC /* main.m */; };
 		AFCC0306192C52790048CCEC /* Stocks.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFCC0305192C52790048CCEC /* Stocks.1 */; };
 		AFCC0314192C52F00048CCEC /* BNRStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0313192C52F00048CCEC /* BNRStockHolding.m */; };
+		AFCC031A192CE2190048CCEC /* BNRForeignStockHolding.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0319192CE2190048CCEC /* BNRForeignStockHolding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		AFCC0305192C52790048CCEC /* Stocks.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Stocks.1; sourceTree = "<group>"; };
 		AFCC0312192C52F00048CCEC /* BNRStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRStockHolding.h; sourceTree = "<group>"; };
 		AFCC0313192C52F00048CCEC /* BNRStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRStockHolding.m; sourceTree = "<group>"; };
+		AFCC0318192CE2190048CCEC /* BNRForeignStockHolding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRForeignStockHolding.h; sourceTree = "<group>"; };
+		AFCC0319192CE2190048CCEC /* BNRForeignStockHolding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRForeignStockHolding.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				AFCC0301192C52790048CCEC /* main.m */,
+				AFCC0318192CE2190048CCEC /* BNRForeignStockHolding.h */,
+				AFCC0319192CE2190048CCEC /* BNRForeignStockHolding.m */,
 				AFCC0305192C52790048CCEC /* Stocks.1 */,
 				AFCC0303192C52790048CCEC /* Supporting Files */,
 				AFCC0312192C52F00048CCEC /* BNRStockHolding.h */,
@@ -144,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCC031A192CE2190048CCEC /* BNRForeignStockHolding.m in Sources */,
 				AFCC0302192C52790048CCEC /* main.m in Sources */,
 				AFCC0314192C52F00048CCEC /* BNRStockHolding.m in Sources */,
 			);
@@ -259,6 +265,7 @@
 				AFCC030B192C52790048CCEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

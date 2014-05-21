@@ -11,6 +11,7 @@
 		AFCC02E5192C4B3F0048CCEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC02E4192C4B3F0048CCEC /* main.m */; };
 		AFCC02E9192C4B3F0048CCEC /* BMITime.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFCC02E8192C4B3F0048CCEC /* BMITime.1 */; };
 		AFCC02F1192C4BB60048CCEC /* BNRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC02F0192C4BB60048CCEC /* BNRPerson.m */; };
+		AFCC0317192CDC640048CCEC /* BNREmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0316192CDC640048CCEC /* BNREmployee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		AFCC02E8192C4B3F0048CCEC /* BMITime.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BMITime.1; sourceTree = "<group>"; };
 		AFCC02EF192C4BB60048CCEC /* BNRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPerson.h; sourceTree = "<group>"; };
 		AFCC02F0192C4BB60048CCEC /* BNRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPerson.m; sourceTree = "<group>"; };
+		AFCC0315192CDC640048CCEC /* BNREmployee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNREmployee.h; sourceTree = "<group>"; };
+		AFCC0316192CDC640048CCEC /* BNREmployee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNREmployee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,8 @@
 				AFCC02E4192C4B3F0048CCEC /* main.m */,
 				AFCC02EF192C4BB60048CCEC /* BNRPerson.h */,
 				AFCC02F0192C4BB60048CCEC /* BNRPerson.m */,
+				AFCC0315192CDC640048CCEC /* BNREmployee.h */,
+				AFCC0316192CDC640048CCEC /* BNREmployee.m */,
 				AFCC02E8192C4B3F0048CCEC /* BMITime.1 */,
 				AFCC02E6192C4B3F0048CCEC /* Supporting Files */,
 			);
@@ -144,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCC0317192CDC640048CCEC /* BNREmployee.m in Sources */,
 				AFCC02E5192C4B3F0048CCEC /* main.m in Sources */,
 				AFCC02F1192C4BB60048CCEC /* BNRPerson.m in Sources */,
 			);
@@ -259,6 +265,7 @@
 				AFCC02EE192C4B3F0048CCEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
