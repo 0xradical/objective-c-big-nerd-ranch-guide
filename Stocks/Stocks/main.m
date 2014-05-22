@@ -8,39 +8,45 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRForeignStockHolding.h"
+#import "BNRPortfolio.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
-        BNRStockHolding *stockOne = [[BNRStockHolding alloc] init];
-        BNRStockHolding *stockTwo = [[BNRStockHolding alloc] init];
-        BNRForeignStockHolding *stockThree = [[BNRForeignStockHolding alloc] init];
         
-        [stockOne setPurchaseSharePrice:2.30];
-        [stockOne setCurrentSharePrice:4.50];
-        [stockOne setNumberOfShares:40];
+        BNRPortfolio *portfolio = [[BNRPortfolio alloc] init];
         
-        [stockTwo setPurchaseSharePrice:12.19];
-        [stockTwo setCurrentSharePrice:10.56];
-        [stockTwo setNumberOfShares:90];
+        BNRStockHolding *holdingOne = [[BNRStockHolding alloc] init];
+        BNRStockHolding *holdingTwo = [[BNRStockHolding alloc] init];
+        BNRForeignStockHolding *holdingThree = [[BNRForeignStockHolding alloc] init];
         
-        [stockThree setPurchaseSharePrice:45.10];
-        [stockThree setCurrentSharePrice:49.51];
-        [stockThree setNumberOfShares:210];
-        [stockThree setConversionRate:0.94];
+        [holdingOne setPurchaseSharePrice:2.30];
+        [holdingOne setCurrentSharePrice:4.50];
+        [holdingOne setNumberOfShares:40];
+        [holdingOne setSymbol:@"XYZ"];
         
-        NSMutableArray *stocks = [NSMutableArray array];
+        [portfolio addHolding:holdingOne];
         
-        [stocks addObject:stockOne];
-        [stocks addObject:stockTwo];
-        [stocks addObject:stockThree];
+        [holdingTwo setPurchaseSharePrice:12.19];
+        [holdingTwo setCurrentSharePrice:10.56];
+        [holdingTwo setNumberOfShares:90];
+        [holdingTwo setSymbol:@"ABC"];
         
-        for (BNRStockHolding *stock in stocks) {
-            NSLog(@"Value of stock is %f", [stock valueInDollars]);
-        }
+        [portfolio addHolding:holdingTwo];
+        
+        [holdingThree setPurchaseSharePrice:45.10];
+        [holdingThree setCurrentSharePrice:49.51];
+        [holdingThree setNumberOfShares:210];
+        [holdingThree setConversionRate:0.94];
+        [holdingThree setSymbol:@"LMN"];
+
+        [portfolio addHolding:holdingThree];
+    
+        NSLog(@"%@", portfolio);
         
     }
+    
     return 0;
 }
 

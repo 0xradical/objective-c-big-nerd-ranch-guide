@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF9504AA192E067000408224 /* BNRPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9504A9192E067000408224 /* BNRPortfolio.m */; };
 		AFCC02FF192C52790048CCEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCC02FE192C52790048CCEC /* Foundation.framework */; };
 		AFCC0302192C52790048CCEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCC0301192C52790048CCEC /* main.m */; };
 		AFCC0306192C52790048CCEC /* Stocks.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AFCC0305192C52790048CCEC /* Stocks.1 */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF9504A8192E067000408224 /* BNRPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRPortfolio.h; sourceTree = "<group>"; };
+		AF9504A9192E067000408224 /* BNRPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRPortfolio.m; sourceTree = "<group>"; };
 		AFCC02FB192C52790048CCEC /* Stocks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Stocks; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCC02FE192C52790048CCEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AFCC0301192C52790048CCEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				AFCC0301192C52790048CCEC /* main.m */,
+				AF9504A8192E067000408224 /* BNRPortfolio.h */,
+				AF9504A9192E067000408224 /* BNRPortfolio.m */,
 				AFCC0318192CE2190048CCEC /* BNRForeignStockHolding.h */,
 				AFCC0319192CE2190048CCEC /* BNRForeignStockHolding.m */,
 				AFCC0305192C52790048CCEC /* Stocks.1 */,
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFCC031A192CE2190048CCEC /* BNRForeignStockHolding.m in Sources */,
+				AF9504AA192E067000408224 /* BNRPortfolio.m in Sources */,
 				AFCC0302192C52790048CCEC /* main.m in Sources */,
 				AFCC0314192C52F00048CCEC /* BNRStockHolding.m in Sources */,
 			);
