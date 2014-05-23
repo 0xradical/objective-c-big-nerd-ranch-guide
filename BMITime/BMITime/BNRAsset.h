@@ -10,7 +10,7 @@
 
 @interface BNRAsset : NSObject
 
-@property (nonatomic) NSString *label;
+@property (nonatomic, copy) NSString *label;
 @property (nonatomic) unsigned int resaleValue;
 
 @end

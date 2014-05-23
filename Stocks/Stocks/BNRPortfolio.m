@@ -9,6 +9,13 @@
 #import "BNRPortfolio.h"
 #import "BNRStockHolding.h"
 
+@interface BNRPortfolio ()
+
+@property (nonatomic, copy) NSMutableArray *holdings;
+
+@end
+
+
 @implementation BNRPortfolio
 
 - (void)addHolding:(BNRStockHolding *)h
@@ -18,6 +25,11 @@
     }
     
     [_holdings addObject:h];
+}
+
+- (void)removeHolding:(BNRStockHolding *)h
+{
+    [_holdings removeObject:h];
 }
 
 - (float)totalValue
