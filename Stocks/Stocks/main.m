@@ -15,11 +15,17 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        BNRPortfolio *portfolio = [[BNRPortfolio alloc] init];
+        BNRPortfolio *portfolio
+            = [[BNRPortfolio alloc] init];
         
-        BNRStockHolding *holdingOne = [[BNRStockHolding alloc] init];
-        BNRStockHolding *holdingTwo = [[BNRStockHolding alloc] init];
-        BNRForeignStockHolding *holdingThree = [[BNRForeignStockHolding alloc] init];
+        BNRStockHolding *holdingOne
+            = [[BNRStockHolding alloc] init];
+        BNRStockHolding *holdingTwo
+            = [[BNRStockHolding alloc] init];
+        BNRForeignStockHolding *holdingThree
+            = [[BNRForeignStockHolding alloc] init];
+        BNRForeignStockHolding *holdingFour
+            = [[BNRForeignStockHolding alloc] init];
         
         [holdingOne setPurchaseSharePrice:2.30];
         [holdingOne setCurrentSharePrice:4.50];
@@ -42,8 +48,20 @@ int main(int argc, const char * argv[])
         [holdingThree setSymbol:@"LMN"];
 
         [portfolio addHolding:holdingThree];
-    
+        
+        [holdingFour setPurchaseSharePrice:20.10];
+        [holdingFour setCurrentSharePrice:90.32];
+        [holdingFour setNumberOfShares:100];
+        [holdingFour setConversionRate:0.80];
+        [holdingFour setSymbol:@"TBD"];
+        
+        [portfolio addHolding:holdingFour];
+        
         NSLog(@"%@", portfolio);
+        
+        NSLog(@"Top three most valuable: %@", [portfolio topThreeMostValuable]);
+        
+        NSLog(@"Sorted portfolio: %@", [portfolio holdingsSortedAlphabetically]);
         
     }
     

@@ -16,7 +16,11 @@
 @property (nonatomic) NSDate *hireDate;
 // should still use copy
 // because someone could set an NSMutableArray
-@property (nonatomic, copy) NSArray *assets;
+// in the API, a user won't be able to use addObject
+// generated automatically (because NSSet is immutable,
+// and this method is not present)
+// The user will have to use addAsset
+@property (nonatomic, copy) NSSet *assets;
 
 - (double)yearsOfEmployment;
 - (void)addAsset:(BNRAsset *)a;

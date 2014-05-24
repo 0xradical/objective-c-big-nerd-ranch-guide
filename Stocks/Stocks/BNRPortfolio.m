@@ -48,4 +48,28 @@
     return [_holdings description];
 }
 
+// challenge top holdings
+- (NSArray *)topThreeMostValuable
+{
+    NSSortDescriptor *vid
+        = [NSSortDescriptor sortDescriptorWithKey:@"valueInDollars"
+                                        ascending:NO];
+    NSArray *sorted
+        = [self.holdings sortedArrayUsingDescriptors:@[vid]];
+    
+    return [sorted subarrayWithRange:NSMakeRange(0, 3)];
+    
+}
+
+// sorted holdings
+- (NSArray *)holdingsSortedAlphabetically
+{
+    NSSortDescriptor *alpha
+        = [NSSortDescriptor sortDescriptorWithKey:@"symbol"
+                                        ascending:YES];
+    
+    return [self.holdings sortedArrayUsingDescriptors:@[alpha]];
+    
+}
+
 @end

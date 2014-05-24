@@ -9,22 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface BNRStockHolding : NSObject
-{
-    float _purchaseSharePrice;
-    float _currentSharePrice;
-    int _numberOfShares;
-}
 
 @property (nonatomic) NSString *symbol;
-
-- (float)purchaseSharePrice;
-- (void)setPurchaseSharePrice:(float)psp;
-
-- (float)currentSharePrice;
-- (void)setCurrentSharePrice:(float)csp;
-
-- (int)numberOfShares;
-- (void)setNumberOfShares:(int)nos;
+@property (nonatomic) float purchaseSharePrice;
+@property (nonatomic) float currentSharePrice;
+@property (nonatomic) int numberOfShares;
 
 - (float)costInDollars;
 - (float)valueInDollars;

@@ -12,7 +12,7 @@
 // class extension
 @interface BNREmployee ()
 {
-    NSMutableArray *_assets;
+    NSMutableSet *_assets;
 }
 
 @property (nonatomic) unsigned int officeAlarmCode;
@@ -21,23 +21,15 @@
 
 @implementation BNREmployee
 
-- (void)setAssets:(NSArray *)a
-{
-    _assets = [a mutableCopy];
-}
-
-- (NSArray *)assets
-{
-    return [_assets copy];
-}
-
 - (void)addAsset:(BNRAsset *)a
 {
     if (!_assets) {
-        _assets = [[NSMutableArray alloc] init];
+        _assets = [[NSMutableSet alloc] init];
     }
     
     [_assets addObject:a];
+    
+    a.holder = self;
 }
 
 - (void)removeAsset:(BNRAsset *)a
