@@ -16,10 +16,17 @@ int main(int argc, const char * argv[])
         
         BNRLogger *logger = [[BNRLogger alloc] init];
         
-        [[NSNotificationCenter defaultCenter] addObserver:logger
-                                                 selector:@selector(zoneChange:)
-                                                     name:NSSystemTimeZoneDidChangeNotification
-                                                   object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:logger
+//                                                 selector:@selector(zoneChange:)
+//                                                     name:NSSystemTimeZoneDidChangeNotification
+//                                                   object:nil];
+
+        [[NSNotificationCenter defaultCenter] addObserverForName:NSSystemTimeZoneDidChangeNotification
+                                                          object:nil
+                                                           queue:nil
+                                                      usingBlock:^(NSNotification *note) {
+                                                          NSLog(@"The system zone has changed!");
+                                                      }];
         
         
         
