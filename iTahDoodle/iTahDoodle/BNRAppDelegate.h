@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+NSString *BNRDocPath(void);
+
 @interface BNRAppDelegate : UIResponder <UIApplicationDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UIWindow *window;

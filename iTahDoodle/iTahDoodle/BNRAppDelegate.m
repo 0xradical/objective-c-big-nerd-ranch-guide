@@ -8,14 +8,30 @@
 
 #import "BNRAppDelegate.h"
 
+#pragma mark - Helper C functions
+
+NSString *BNRDocPath(void)
+{
+    NSString *documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    
+    return [documentDirectory stringByAppendingPathComponent:@"data.td"];
+}
+
+
 #pragma mark - Application delegate callbacks
 
 @implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Load existing Data Set
+    NSArray *plist =  [NSArray arrayWithContentsOfFile:BNRDocPath()];
     
-    self.tasks = [NSMutableArray array];
+    if (plist) {
+        self.tasks = [plist mutableCopy];
+    } else {
+        self.tasks = [NSMutableArray array];
+    }
     
     CGRect winFrame = [[UIScreen mainScreen] bounds];
     UIWindow *theWindow = [[UIWindow alloc] initWithFrame:winFrame];
@@ -75,6 +91,8 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [self.tasks writeToFile:BNRDocPath() atomically:YES];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
