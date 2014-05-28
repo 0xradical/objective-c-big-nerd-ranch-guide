@@ -35,6 +35,7 @@ int main(int argc, const char * argv[])
         [oa addOwnerName:@"Mario"];
         
         NSLog(@"oa is %@", oa);
+        
     }
     return 0;
 }
