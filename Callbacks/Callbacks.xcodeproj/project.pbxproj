@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0CC48C19356E6400EAE9D8 /* BNRObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0CC48B19356E6400EAE9D8 /* BNRObserver.m */; };
 		AF81F4591930D6B400F4090E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF81F4581930D6B400F4090E /* Foundation.framework */; };
 		AF81F45C1930D6B400F4090E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF81F45B1930D6B400F4090E /* main.m */; };
 		AF81F4601930D6B400F4090E /* Callbacks.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AF81F45F1930D6B400F4090E /* Callbacks.1 */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF0CC48A19356E6400EAE9D8 /* BNRObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRObserver.h; sourceTree = "<group>"; };
+		AF0CC48B19356E6400EAE9D8 /* BNRObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRObserver.m; sourceTree = "<group>"; };
 		AF81F4551930D6B400F4090E /* Callbacks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Callbacks; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF81F4581930D6B400F4090E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF81F45B1930D6B400F4090E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				AF81F4671930D73B00F4090E /* BNRLogger.m */,
 				AF81F45F1930D6B400F4090E /* Callbacks.1 */,
 				AF81F45D1930D6B400F4090E /* Supporting Files */,
+				AF0CC48A19356E6400EAE9D8 /* BNRObserver.h */,
+				AF0CC48B19356E6400EAE9D8 /* BNRObserver.m */,
 			);
 			path = Callbacks;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF81F4681930D73B00F4090E /* BNRLogger.m in Sources */,
+				AF0CC48C19356E6400EAE9D8 /* BNRObserver.m in Sources */,
 				AF81F45C1930D6B400F4090E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +265,7 @@
 				AF81F4651930D6B400F4090E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
